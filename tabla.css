@@ -1,0 +1,118 @@
+#header {
+    background-color: darkslategrey;
+    color: lightgray;
+    text-align: right;
+    font-family: cursive;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+header h1 {
+	font-size: 40px;
+	font-weight: 800;
+        margin-bottom: 5px;
+        margin-top: 5px;
+}
+header nav {
+	text-align: right;
+}
+header nav a {
+	color: lavender;
+	margin-left: 10px;
+        margin-top: 10px;
+	display: inline-block;
+	padding: 10px 10px;
+	text-transform: uppercase
+}
+header nav a:hover {
+	background: lavender;
+	box-shadow: inset 0 0 10px rgba(0,0,0,0.2)
+}
+@media(max-width:768px) {
+	header h1,
+	header nav a {
+		text-align: center;
+		display: block;
+	}
+	header nav a {
+		background: #537506;
+		margin: 0 0 2px 0
+	}
+	header h1 {
+		padding: 0 0 10px 0
+	}
+}
+body {
+    background-image: url("http://coolwallpaperz.info/user-content/uploads/wall/o/65/architecture-floral-black-dark-556183.jpg");
+
+}
+#bevitel, #kereso {
+    border: 5px solid ;
+    border-style: groove;
+    color: lightgray;
+    text-align: center;
+    text-decoration: underline;
+    font-family: cursive;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    margin:  10px 5px 10px 5px;
+    box-shadow: 3px 3px 4px darkslategray;
+    border-radius: 7px;
+   
+}
+#tartalom {
+    color: white;
+    text-align: center;
+    
+} 
+#tartalom label {
+    color: lightgray;
+    margin: 5px 5px 5px 5px;
+    font-size: 20px;
+    display: block;
+}   
+#nev, #sorozat, #cim, #kep, #megjegyzes, #neve, #cime {
+   width: 250px;
+   height: 30px;
+   padding: 5px;
+   margin: 2px 0 20px 10px;
+   border-radius: 6px;
+   border: solid 2px #c5b78a;
+   color: black;
+ }
+
+#resz {
+    width: 120px;
+    height: 25px;
+    border-radius: 6px;
+    padding: 5px;
+    border: solid 2px #c5b78a;
+    color: black;
+}
+#check {
+    margin: 8px 5px 8px 5px;
+}
+
+#kep {
+    color: white;
+    
+}
+#megjegyzes {
+    width: 270px;
+    height: 100px;
+}
+#kereso {
+  margin-left: 10px;  
+  margin-right: 10px;
+}
+table{
+    border: 3px #c5b78a solid;
+    width: 100%;
+    text-align: left;
+}
+tr td {
+    border: 1px solid #c5b78a;
+    height: 10px;
+    
+}
+td {
+   
+}
