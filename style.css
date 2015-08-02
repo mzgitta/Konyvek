@@ -70,7 +70,7 @@ body {
     
    
 }
-#nev, #sorozat, #cim, #kep, #megjegyzes, #neve, #cime {
+#nev, #sorozat, #cim, #kep, #megjegyzes, #neve, #cime, #keresett{
    width: 250px;
    height: 30px;
    padding: 5px;
@@ -110,4 +110,17 @@ body {
 }
 #kereso {
   margin-left: 150px;  
+}
+table{
+    border: 3px #c5b78a solid;
+    width: 100%;
+    text-align: left;
+}
+tr td {
+    border: 1px solid #c5b78a;
+    height: 10px;
+    
+}
+td {
+   
 }

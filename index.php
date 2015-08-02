@@ -16,6 +16,7 @@ if (isset($_POST['iro'])) {
     $sorozat = mysqli_real_escape_string($db, $_POST['sorozat']);
     $resz = mysqli_real_escape_string($db, $_POST['resz']);
     $megjegyzes = mysqli_real_escape_string($db, $_POST['megjegyzes']);
+    $keresett = mysqli_real_escape_string($db, $_POST['keresett']);
 
     $mobi = (isset($_POST['mobi'])) ? 1 : 0;
     $azw = (isset($_POST['azw'])) ? 1 : 0;
@@ -126,27 +127,35 @@ if (isset($_POST['iro'])) {
                                     <div class="row">
                                         <div class="col-md-12 col-sm-8" id="tartalom">
                                             <label>Író </label>
-                                            <input type="text"  name="nev" id="neve">                                 
+                                            <input type="text"  name="keresett" id="keresett">                                 
 
-                                            <label>Cím</label>
-                                            <input type="text" name="cim" id="cime">
 
-                                            <input class="btn btn-default" type="submit" name="keres" id="keres" value="Keres">
+
+                                            <input type="submit" name="keres" id="keres" value="Keres">
 
                                             <button onclick="kereso()">Keres</button>
-                                           <?php
-                                            
-                                              /*  
-                                            $sql = "SELECT * FROM konyvek";
+
+                                            <?php
+                                            $keresett = mysqli_real_escape_string($db, $_POST['keresett']);
+
+                                            $db = mysqli_connect('localhost', 'root', 'Lyel_Sz00', 'konyvek');
+                                            if (mysqli_connect_errno()) {
+                                                die(mysqli_connect_error());
+                                            }
+                                            mysqli_set_charset($db, 'utf8');
+
+
+
+                                          
 
                                             echo '<h2>Könyvek</h2>';
-                                            $query = "SELECT * FROM konyvek";
+                                            $query = "SELECT * FROM konyvek WHERE iro LIKE '%". $_POST['keresett'] ."%'";
                                             $result = mysqli_query($db, $query);
                                             if (mysqli_errno($db)) {
                                                 echo mysqli_error($db);
                                             }
                                             // eredmény feldolgozása:
-                                            echo '<table border="1">'; // !! border helyett css !!!
+                                            echo '<table>'; // !! border helyett css !!!
                                             echo '<tr><th>Cím<th>Író<th>Sorozat<th>Sorozatrész<th>mobi<th>azw<th>pdf'; // *
                                             while ($row = mysqli_fetch_object($result)) { // *
                                                 echo '<tr><td>' . $row->konyvcim; // *
@@ -155,9 +164,10 @@ if (isset($_POST['iro'])) {
                                                 echo '<td>' . $row->sorozatresz;
                                                 echo '<td>' . $row->formatum; // *
                                             }
-                                            echo '</table>'; */
-                                            ?> 
+                                            echo '</table>';
                                             
+                                            ?> 
+
                                         </div>
                                     </div>
                                 </div>
